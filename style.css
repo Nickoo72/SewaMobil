@@ -1,0 +1,131 @@
+body {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-bg,
+.hero-bg-next {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 1s ease-in-out;
+}
+
+.hero-bg {
+  z-index: 0;
+  transform: translateX(0);
+}
+
+.hero-bg-next {
+  z-index: 0;
+  transform: translateX(100%);
+}
+
+/* .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+} */
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  text-shadow: 7px 7px 20px black;
+}
+/* Tombol */
+.btn {
+  background-color: rgb(72, 72, 74);
+  color: white;
+  font-size: small;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(171, 171, 172);
+    transform: scale(1.2);
+    color: white;
+}
+
+/* Card animasi */
+.card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Placeholder mobil */
+.card-car{
+    background-color: #dedede99;
+}
+.card-car:hover{
+    box-shadow: 4px 4px 20px black;
+    transition: 0.5s;
+}
+.car-title{
+    text-shadow: 1px 1px 10px gold;
+}
+.car-placeholder {
+    background-color: white;
+    height: 250px;
+}
+
+/*  */
+/* Responsif untuk Google Maps */
+.map-responsive {
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  #contact {
+    text-align: center;
+  }
+
+  #contact .btn {
+    width: 100%;
+  }
+
+  #contact p {
+    text-align: center;
+  }
+}
+
+
+/* Footer */
+.img-footer{
+    height: 30px;
+}
+footer {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
