@@ -94,10 +94,15 @@ body {
 .car-title{
     text-shadow: 1px 1px 10px gold;
 }
-.car-placeholder {
-    background-color: white;
-    height: 250px;
+.car-placeholder img {
+  width: 100%;
+  height: auto;
 }
+.car-placeholder {
+  background-color:white;
+  height: auto;
+}
+
 
 /*  */
 /* Responsif untuk Google Maps */
@@ -129,3 +134,4 @@ footer {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
 }
+
