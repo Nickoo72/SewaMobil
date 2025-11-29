@@ -43,19 +43,12 @@ body {
   transform: translateX(100%);
 }
 
-/* .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-} */
-
 .hero .container {
   position: relative;
   z-index: 2;
   text-shadow: 7px 7px 20px black;
 }
+
 /* Tombol */
 .btn {
   background-color: rgb(72, 72, 74);
@@ -66,8 +59,8 @@ body {
 
 .btn:hover {
   background-color: rgb(171, 171, 172);
-    transform: scale(1.2);
-    color: white;
+  transform: scale(1.2);
+  color: white;
 }
 
 /* Card animasi */
@@ -84,34 +77,60 @@ body {
   transform: translateY(40px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-
 .fade-in-up.show {
   opacity: 1;
   transform: translateY(0);
 }
-/* Placeholder mobil */
-.card-car{
-    background-color: #dedede99;
+
+/* CARD MOBIL DAN MOTOR (PERBAIKAN) */
+.card-car {
+  background-color: #dedede99;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* semua card sama tinggi */
+  border-radius: 10px;
+  transition: 0.3s ease;
 }
-.card-car:hover{
-    box-shadow: 4px 4px 20px black;
-    transition: 0.5s;
+
+.card-car:hover {
+  box-shadow: 4px 4px 20px black;
 }
-.car-title{
-    text-shadow: 1px 1px 10px gold;
+
+/* Judul shimmer */
+.car-title {
+  text-shadow: 1px 1px 10px gold;
 }
+
+/* Placeholder gambar */
+.car-placeholder {
+  width: 100%;
+  height: 200px; /* atur tinggi cover */
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
 .car-placeholder img {
   width: 100%;
-  height: auto;
-}
-.car-placeholder {
-  background-color:white;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* pastikan gambar tidak keluar */
 }
 
+/* Area harga fleksibel agar tombol sejajar */
+.card-car .my-4 {
+  flex-grow: 1;
+}
 
-/*  */
-/* Responsif untuk Google Maps */
+/* Tombol sejajar di bawah */
+.card-car a.btn {
+  align-self: center;
+  margin-top: auto;
+}
+
+/* Responsif Google Maps */
 .map-responsive {
   overflow: hidden;
   position: relative;
@@ -131,14 +150,12 @@ body {
   }
 }
 
-
 /* Footer */
-.img-footer{
-    height: 30px;
+.img-footer {
+  height: 30px;
 }
+
 footer {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
 }
-
-
