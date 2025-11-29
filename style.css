@@ -104,20 +104,23 @@ body {
 /* Placeholder gambar */
 .car-placeholder {
   width: 100%;
-  height: 200px; /* atur tinggi cover */
+  height: 220px;        /* semua cover gambar seragam */
   overflow: hidden;
   border-radius: 10px;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
 }
 
+/* Gambar mengikuti cover (bukan sebaliknya) */
 .car-placeholder img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* pastikan gambar tidak keluar */
+  object-fit: cover;    /* kunci utama */
+  object-position: center; 
 }
+
 
 /* Area harga fleksibel agar tombol sejajar */
 .card-car .my-4 {
@@ -159,3 +162,4 @@ footer {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
 }
+
